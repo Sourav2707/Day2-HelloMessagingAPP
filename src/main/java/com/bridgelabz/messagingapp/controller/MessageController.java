@@ -30,4 +30,10 @@ public class MessageController {
     public String helloUser(@RequestBody User user) {
         return "Hello "+user.getFirstName()+" "+user.getLastName()+" from BridgeLabz";
     }
+
+    //localhost:8080/hello/put/Sourav/?lastName=Prasanna
+    @PutMapping("/put/{firstName}")
+    public String helloUser(@PathVariable String firstName, @RequestParam(value = "lastName") String lastName) {
+        return "Hello "+firstName+" "+lastName+" from BridgeLabz";
+    }
 }
