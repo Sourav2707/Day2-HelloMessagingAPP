@@ -13,7 +13,7 @@ public class MessageController {
     }
 
     //localhost:8080/hello/query?name=Sourav
-    @RequestMapping(value = "/query", method = RequestMethod.GET)
+    @GetMapping(value = "/query")
     public String sayHelloMessage(@RequestParam(value = "name") String name) {
         return "Hello "+name+" from BridgeLabz";
     }
